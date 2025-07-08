@@ -1,0 +1,37 @@
+OUTPUT OF TRAINING :
+
+PS C:\Users\nithi\OneDrive\Documents\BVRIT\techsophy> & C:/Users/nithi/OneDrive/Documents/BVRIT/techsophy/venv/Scripts/python.exe c:/Users/nithi/OneDrive/Documents/BVRIT/techsophy/rollback_predictor_with_dataset.py
+2025-07-08 19:34:00,406 - INFO - Generated dataset with 10000 samples, rollback distribution: {1: 0.8, 0: 0.2}
+2025-07-08 19:34:00,576 - INFO - Synthetic dataset saved to 'synthetic_deployment_data.csv'
+2025-07-08 19:34:00,591 - INFO - Class distribution: [1621 6379]
+2025-07-08 19:35:02,006 - INFO - Best parameters: {'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'log2', 'max_depth': 10, 'class_weight': 'balanced'}
+2025-07-08 19:35:02,049 - INFO - Feature Importance:
+lines_added: 0.0998
+lines_deleted: 0.1099
+commit_count: 0.0914
+error_rate: 0.1196
+latency_ms: 0.1272
+latency_increase: 0.1142
+test_coverage: 0.1168
+bug_count: 0.0829
+deploy_type: 0.0188
+env: 0.0100
+code_churn: 0.1095
+2025-07-08 19:35:02,203 - INFO - Accuracy: 0.7370
+2025-07-08 19:35:02,203 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.19      0.12      0.14       379
+           1       0.81      0.88      0.84      1621
+
+    accuracy                           0.74      2000
+   macro avg       0.50      0.50      0.49      2000
+weighted avg       0.69      0.74      0.71      2000
+
+
+OUTPUT OF TEST :
+
+deployment_id: demo_deploy_001
+rollback_probability: 0.45
+rollback_needed: False
+risk_level: MEDIUM
